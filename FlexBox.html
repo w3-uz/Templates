@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>FlexBox</title>
+		<style>
+		body {
+		background : black;
+		color : white;
+		margin : 20px;
+		direct ion: rtl;
+		text-align: center
+		}
+		.flex {
+		display: -webkit-flex;
+		display: flex;
+		width: 700px;
+		height: 250px;
+		background-color: #404040;
+		}
+		div[class="flex-item"] {
+		background-color: cornflowerblue;
+		width: 100px;
+		height: 100px;
+		margin: 10px;
+		}
+		.frow {
+		-webkit-flex-direction: row;
+		flex-direction: row;
+		}
+		.frow-reverse {
+		-webkit-flex-direction: row-reverse;
+		flex-direction: row-reverse;
+		}
+		.fcolumn {
+		-webkit-flex-direction: column;
+		flex-direction: column;
+		}
+		.fcolumn-reverse {
+		-webkit-flex-direction: column-reverse;
+		flex-direction: column-reverse;
+
+		}
+		.jflex-start {
+		-webkit-justify-content: flex-start;
+		justify-content: flex-start;
+		}
+		.jflex-end {
+		-webkit-justify-content: flex-end;
+		justify-content: flex-end;
+		}
+		.jcenter {
+		-webkit-justify-content: center;
+		justify-content: center;
+		}
+		.jspace-between {
+		-webkit-justify-content: space-between;
+		justify-content: space-between;
+		}
+		.jspace-around {
+		-webkit-justify-content: space-around;
+		justify-content: space-around;
+		}
+		.astretch {
+		-webkit-align-items: stretch;
+		-ms-align-items: stretch;
+		-o-align-items: stretch;
+		align-items: stretch;
+		}
+		.aflex-start {
+		-webkit-align-items: flex-start;
+		align-items: flex-start;
+		}
+		.acenter {
+		-webkit-align-items: center;
+		-ms-align-items: center;
+		-o-align-items: center;
+		align-items: center;
+		}
+		.abaseline {
+		-webkit-align-items: baseline;
+		-ms-align-items: baseline;
+		-o-align-items: baseline;
+		align-items: baseline;
+		}
+		.wnowrap {
+		-webkit-flex-wrap: nowrap;
+		-ms-flex-wrap: nowrap;
+		-o-flex-wrap: nowrap;
+		flex-wrap: nowrap;
+		}
+		.wwrap {
+		-webkit-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		-o-flex-wrap: wrap;
+		flex-wrap: wrap;
+		}
+		.wwrap-reverse {
+		-webkit-flex-wrap: wrap-reverse;
+		-ms-flex-wrap: wrap-reverse;
+		-o-flex-wrap: wrap-reverse;
+		flex-wrap: wrap-reverse;
+		}
+		.ffstretch {
+		-webkit-flex-wrap: wrap;
+		flex-wrap: wrap;
+		-webkit-align-content: stretch;
+		align-content: stretch;
+		}
+		.ffflex-start {
+		-webkit-flex-wrap: wrap;
+		flex-wrap: wrap;
+		-webkit-align-content: flex-start;
+		align-content: flex-start;
+		}
+		.ffflex-end {
+		-webkit-flex-wrap: wrap;
+		flex-wrap: wrap;
+		-webkit-align-content: flex-end;
+		align-content: flex-end;
+		}
+		.ffspace-between {
+		-webkit-flex-wrap: wrap;
+		flex-wrap: wrap;
+		-webkit-align-content: space-between;
+		align-content: space-between;
+		}
+		.ffspace-around {
+		-webkit-flex-wrap: wrap;
+		flex-wrap: wrap;
+		-webkit-align-content: space-around;
+		align-content: space-around;
+		}
+		</style>
+	</head>
+	<body>
+		<h1>flex-direction › row</h1>
+		<div class="flex frow">
+			<div class="flex-item">flex item 1</div>
+			<div class="flex-item">flex item 2</div>
+			<div class="flex-item">flex item 3</div>
+			<div class="flex-item">flex item 4</div>
+			<div class="flex-item">flex item 5</div>
+			<div class="flex-item">flex item 6</div>
+			<div class="flex-item">flex item 7</div>
+			<div class="flex-item">flex item 8</div>
+			<div class="flex-item">flex item 9</div>
+			<div class="flex-item">flex item 10</div>
+		</div>
+		<h1>flex-direction › row-reverse</h1>
+		<div class="flex frow-reverse">
+			<div class="flex-item">flex item 1</div>
+			<div class="flex-item">flex item 2</div>
+			<div class="flex-item">flex item 3</div>
+			<div class="flex-item">flex item 4</div>
+			<div class="flex-item">flex item 5</div>
+			<div class="flex-item">flex item 6</div>
+			<div class="flex-item">flex item 7</div>
+			<div class="flex-item">flex item 8</div>
+			<div class="flex-item">flex item 9</div>
+			<div class="flex-item">flex item 10</div>
+		</div>
+		<h1>flex-direction › column</h1>
+		<div class="flex fcolumn">
+			<div class="flex-item">flex item 1</div>
+			<div class="flex-item">flex item 2</div>
+			<div class="flex-item">flex item 3</div>
+			<div class="flex-item">flex item 4</div>
+			<div class="flex-item">flex item 5</div>
+			<div class="flex-item">flex item 6</div>
+			<div class="flex-item">flex item 7</div>
+			<div class="flex-item">flex item 8</div>
+			<div class="flex-item">flex item 9</div>
+			<div class="flex-item">flex item 10</div>
+		</div>
+		<h1 style="margin-top: 10em;">flex-direction › column-reverse</h1>
+		<div class="flex fcolumn-reverse">
+			<div class="flex-item">flex item 1</div>
+			<div class="flex-item">flex item 2</div>
+			<div class="flex-item">flex item 3</div>
+			<div class="flex-item">flex item 4</div>
+			<div class="flex-item">flex item 5</div>
+			<div class="flex-item">flex item 6</div>
+			<div class="flex-item">flex item 7</div>
+			<div class="flex-item">flex item 8</div>
+			<div class="flex-item">flex item 9</div>
+			<div class="flex-item">flex item 10</div>
+		</div>
+		<hr>
+		<h1>justify-content › flex-start</h1>
+		<div class="flex jflex-start">
+			<div class="flex-item">flex item 1</div>
+			<div class="flex-item">flex item 2</div>
+			<div class="flex-item">flex item 3</div>
+			<div class="flex-item">flex item 4</div>
+			<div class="flex-item">flex item 5</div>
+			<div class="flex-item">flex item 6</div>
+			<div class="flex-item">flex item 7</div>
+			<div class="flex-item">flex item 8</div>
+			<div class="flex-item">flex item 9</div>
+			<div class="flex-item">flex item 10</div>
+		</div>
+		<h1>justify-content › flex-end</h1>
+		<div class="flex jflex-end">
+			<div class="flex-item">flex item 1</div>
+			<div class="flex-item">flex item 2</div>
+			<div class="flex-item">flex item 3</div>
+			<div class="flex-item">flex item 4</div>
+			<div class="flex-item">flex item 5</div>
+			<div class="flex-item">flex item 6</div>
+			<div class="flex-item">flex item 7</div>
+			<div class="flex-item">flex item 8</div>
+			<div class="flex-item">flex item 9</div>
+			<div class="flex-item">flex item 10</div>
+		</div>
+		<h1>justify-content › center</h1>
+		<div class="flex jcenter">
+			<div class="flex-item">flex item 1</div>
+			<div class="flex-item">flex item 2</div>
+			<div class="flex-item">flex item 3</div>
+			<div class="flex-item">flex item 4</div>
+			<div class="flex-item">flex item 5</div>
+			<div class="flex-item">flex item 6</div>
+			<div class="flex-item">flex item 7</div>
+			<div class="flex-item">flex item 8</div>
+			<div class="flex-item">flex item 9</div>
+			<div class="flex-item">flex item 10</div>
+		</div>
+		<h1>justify-content › space-between</h1>
+		<div class="flex jspace-between">
+			<div class="flex-item">flex item 1</div>
+			<div class="flex-item">flex item 2</div>
+			<div class="flex-item">flex item 3</div>
+			<div class="flex-item">flex item 4</div>
+			<div class="flex-item">flex item 5</div>
+			<div class="flex-item">flex item 6</div>
+			<div class="flex-item">flex item 7</div>
+			<div class="flex-item">flex item 8</div>
+			<div class="flex-item">flex item 9</div>
+			<div class="flex-item">flex item 10</div>
+		</div>
+		<h1>justify-content › space-around</h1>
+		<div class="flex jspace-around">
+			<div class="flex-item">flex item 1</div>
+			<div class="flex-item">flex item 2</div>
+			<div class="flex-item">flex item 3</div>
+			<div class="flex-item">flex item 4</div>
+			<div class="flex-item">flex item 5</div>
+			<div class="flex-item">flex item 6</div>
+			<div class="flex-item">flex item 7</div>
+			<div class="flex-item">flex item 8</div>
+			<div class="flex-item">flex item 9</div>
+			<div class="flex-item">flex item 10</div>
+		</div>
+		<hr>
+		<h1>align-items › stretch</h1>
+		<div class="flex astretch">
+			<div class="flex-item">flex item 1</div>
+			<div class="flex-item">flex item 2</div>
+			<div class="flex-item">flex item 3</div>
+			<div class="flex-item">flex item 4</div>
+			<div class="flex-item">flex item 5</div>
+			<div class="flex-item">flex item 6</div>
+			<div class="flex-item">flex item 7</div>
+			<div class="flex-item">flex item 8</div>
+			<div class="flex-item">flex item 9</div>
+			<div class="flex-item">flex item 10</div>
+		</div>
+		<h1>align-items › flex-start</h1>
+		<div class="flex aflex-start">
+			<div class="flex-item">flex item 1</div>
+			<div class="flex-item">flex item 2</div>
+			<div class="flex-item">flex item 3</div>
+			<div class="flex-item">flex item 4</div>
+			<div class="flex-item">flex item 5</div>
+			<div class="flex-item">flex item 6</div>
+			<div class="flex-item">flex item 7</div>
+			<div class="flex-item">flex item 8</div>
+			<div class="flex-item">flex item 9</div>
+			<div class="flex-item">flex item 10</div>
+		</div>
+		<h1>align-items › flex-end</h1>
+		<div class="flex aflex-end">
+			<div class="flex-item">flex item 1</div>
+			<div class="flex-item">flex item 2</div>
+			<div class="flex-item">flex item 3</div>
+			<div class="flex-item">flex item 4</div>
+			<div class="flex-item">flex item 5</div>
+			<div class="flex-item">flex item 6</div>
+			<div class="flex-item">flex item 7</div>
+			<div class="flex-item">flex item 8</div>
+			<div class="flex-item">flex item 9</div>
+			<div class="flex-item">flex item 10</div>
+		</div>
+		<h1>align-items › center</h1>
+		<div class="flex acenter">
+			<div class="flex-item">flex item 1</div>
+			<div class="flex-item">flex item 2</div>
+			<div class="flex-item">flex item 3</div>
+			<div class="flex-item">flex item 4</div>
+			<div class="flex-item">flex item 5</div>
+			<div class="flex-item">flex item 6</div>
+			<div class="flex-item">flex item 7</div>
+			<div class="flex-item">flex item 8</div>
+			<div class="flex-item">flex item 9</div>
+			<div class="flex-item">flex item 10</div>
+		</div>
+		<h1>align-items › baseline</h1>
+		<div class="flex abaseline">
+			<div class="flex-item">flex item 1</div>
+			<div class="flex-item">flex item 2</div>
+			<div class="flex-item">flex item 3</div>
+			<div class="flex-item">flex item 4</div>
+			<div class="flex-item">flex item 5</div>
+			<div class="flex-item">flex item 6</div>
+			<div class="flex-item">flex item 7</div>
+			<div class="flex-item">flex item 8</div>
+			<div class="flex-item">flex item 9</div>
+			<div class="flex-item">flex item 10</div>
+		</div>
+		<hr>
+		<h1>flex-wrap › nowrap</h1>
+		<div class="flex wnowrap">
+			<div class="flex-item">flex item 1</div>
+			<div class="flex-item">flex item 2</div>
+			<div class="flex-item">flex item 3</div>
+			<div class="flex-item">flex item 4</div>
+			<div class="flex-item">flex item 5</div>
+			<div class="flex-item">flex item 6</div>
+			<div class="flex-item">flex item 7</div>
+			<div class="flex-item">flex item 8</div>
+			<div class="flex-item">flex item 9</div>
+			<div class="flex-item">flex item 10</div>
+		</div>
+		<h1>flex-wrap › wrap</h1>
+		<div class="flex wwrap">
+			<div class="flex-item">flex item 1</div>
+			<div class="flex-item">flex item 2</div>
+			<div class="flex-item">flex item 3</div>
+			<div class="flex-item">flex item 4</div>
+			<div class="flex-item">flex item 5</div>
+			<div class="flex-item">flex item 6</div>
+			<div class="flex-item">flex item 7</div>
+			<div class="flex-item">flex item 8</div>
+			<div class="flex-item">flex item 9</div>
+			<div class="flex-item">flex item 10</div>
+		</div>
+		<h1>flex-wrap › wrap-reverse</h1>
+		<div class="flex wwrap-reverse">
+			<div class="flex-item">flex item 1</div>
+			<div class="flex-item">flex item 2</div>
+			<div class="flex-item">flex item 3</div>
+			<div class="flex-item">flex item 4</div>
+			<div class="flex-item">flex item 5</div>
+			<div class="flex-item">flex item 6</div>
+			<div class="flex-item">flex item 7</div>
+			<div class="flex-item">flex item 8</div>
+			<div class="flex-item">flex item 9</div>
+			<div class="flex-item">flex item 10</div>
+		</div>
+		<hr>
+		<h1>align-content › stretch</h1>
+		<div class="flex ffstretch">
+			<div class="flex-item">flex item 1</div>
+			<div class="flex-item">flex item 2</div>
+			<div class="flex-item">flex item 3</div>
+			<div class="flex-item">flex item 4</div>
+			<div class="flex-item">flex item 5</div>
+			<div class="flex-item">flex item 6</div>
+			<div class="flex-item">flex item 7</div>
+			<div class="flex-item">flex item 8</div>
+			<div class="flex-item">flex item 9</div>
+			<div class="flex-item">flex item 10</div>
+		</div>
+		<h1>align-content › flex-start</h1>
+		<div class="flex ffflex-start">
+			<div class="flex-item">flex item 1</div>
+			<div class="flex-item">flex item 2</div>
+			<div class="flex-item">flex item 3</div>
+			<div class="flex-item">flex item 4</div>
+			<div class="flex-item">flex item 5</div>
+			<div class="flex-item">flex item 6</div>
+			<div class="flex-item">flex item 7</div>
+			<div class="flex-item">flex item 8</div>
+			<div class="flex-item">flex item 9</div>
+			<div class="flex-item">flex item 10</div>
+		</div>
+		<h1>align-content › flex-end</h1>
+		<div class="flex ffflex-end">
+			<div class="flex-item">flex item 1</div>
+			<div class="flex-item">flex item 2</div>
+			<div class="flex-item">flex item 3</div>
+			<div class="flex-item">flex item 4</div>
+			<div class="flex-item">flex item 5</div>
+			<div class="flex-item">flex item 6</div>
+			<div class="flex-item">flex item 7</div>
+			<div class="flex-item">flex item 8</div>
+			<div class="flex-item">flex item 9</div>
+			<div class="flex-item">flex item 10</div>
+		</div>
+		<h1>align-content › center</h1>
+		<div class="flex ffcenter">
+			<div class="flex-item">flex item 1</div>
+			<div class="flex-item">flex item 2</div>
+			<div class="flex-item">flex item 3</div>
+			<div class="flex-item">flex item 4</div>
+			<div class="flex-item">flex item 5</div>
+			<div class="flex-item">flex item 6</div>
+			<div class="flex-item">flex item 7</div>
+			<div class="flex-item">flex item 8</div>
+			<div class="flex-item">flex item 9</div>
+			<div class="flex-item">flex item 10</div>
+		</div>
+		<h1>align-content › space-between</h1>
+		<div class="flex ffspace-between">
+			<div class="flex-item">flex item 1</div>
+			<div class="flex-item">flex item 2</div>
+			<div class="flex-item">flex item 3</div>
+			<div class="flex-item">flex item 4</div>
+			<div class="flex-item">flex item 5</div>
+			<div class="flex-item">flex item 6</div>
+			<div class="flex-item">flex item 7</div>
+			<div class="flex-item">flex item 8</div>
+			<div class="flex-item">flex item 9</div>
+			<div class="flex-item">flex item 10</div>
+		</div>
+		<h1>align-content › around</h1>
+		<div class="flex ffspace-around">
+			<div class="flex-item">flex item 1</div>
+			<div class="flex-item">flex item 2</div>
+			<div class="flex-item">flex item 3</div>
+			<div class="flex-item">flex item 4</div>
+			<div class="flex-item">flex item 5</div>
+			<div class="flex-item">flex item 6</div>
+			<div class="flex-item">flex item 7</div>
+			<div class="flex-item">flex item 8</div>
+			<div class="flex-item">flex item 9</div>
+			<div class="flex-item">flex item 10</div>
+		</div>
+		<!--
+		flex-direction
+		row-reverse - If the writing-mode (direction) is left to right, the flex items will be laid out right to left
+		column - If the writing system is horizontal, the flex items will be laid out vertically
+		column-reverse - Same as column, but reversed
+		justify-content:
+		flex-start - Default value. Items are positioned at the beginning of the container
+		flex-end - Items are positioned at the end of the container
+		center - Items are positioned at the center of the container
+		space-between - Items are positioned with space between the lines
+		space-around - Items are positioned with space before, between, and after the lines
+		align-items:
+		stretch - Default value. Items are stretched to fit the container
+		flex-start - Items are positioned at the top of the container
+		flex-end - Items are positioned at the bottom of the container
+		center - Items are positioned at the center of the container (vertically)
+		baseline - Items are positioned at the baseline of the container
+		flex-wrap:
+		nowrap - Default value. The flexible items will not wrap
+		wrap - The flexible items will wrap if necessary
+		wrap-reverse - The flexible items will wrap, if necessary, in reverse order
+		align-content:
+		stretch - Default value. Lines stretch to take up the remaining space
+		flex-start - Lines are packed toward the start of the flex container
+		flex-end - Lines are packed toward the end of the flex container
+		center - Lines are packed toward the center of the flex container
+		space-between - Lines are evenly distributed in the flex container
+		space-around - Lines are evenly distributed in the flex container, with half-size spaces on either end-->
+	</body>
+</html>
